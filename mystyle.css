@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color:  rgb(162, 153, 153);
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(124, 113, 113);
+    display: flex;
+    justify-content: right;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  #logo{
+    font-size: 20px;
+    text-align: end;
+  }
+  
+  .topnav a:hover {
+    color: #ddd;
+    background-color:  rgb(75, 67, 67);;
+  }
+  
+  h1{
+    color: beige;
+    display: flex;
+    justify-content: center;
+  }
+
+  #about{
+
+  }
+
+  #experience{}
+
+  #projects{}
+
+  #technologies{}
+
+  #contact{}
