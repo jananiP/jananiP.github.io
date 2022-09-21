@@ -1,76 +1,125 @@
 <html>
 
 <head>
-    <title>Janani Pargunan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dharini Pargunan</title>
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    
-    <div class="topnav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a id="logo" href="#home">JP</a>
-      </div>
+    <div id="main">
       
-    <div>
-      <div id="about">
-        <h1 style="padding-top: 5%;">About</h1>
-        <hr style="width:50%;text-align:center;margin-bottom:50">
-        <table>
-            <tr>
-                <td class="profile-pic">  
-                    <img src="jan5.jpg" alt="Janani Pargunan" width="300" height="400">
-                </td>
-                <td class="description">
-                    I am a Front-end developer. 
-                    I completed mt post-graduate degree in Computer Science, from George Mason University, Virginia, USA. 
-                    My passion for algorithms led me to pursue my Masters in Computer Science. During my industry exposure as Software Developer,  
-                    I gained exposure to Javascript libraries and frameworks. 
-                    At present, I love building Single Page Applications using libraries like React and Angular framework. 
-                    Over the period of my academic years and Software engineering experience I have been building rich user interfaces with the aim of having faster page loading speeds and improved performance. 
-                    When I am not coding, I'd like to take my eyes off the screen and read books, paint, play badminton or chess.
-                </td>
-            </tr>
-        </table>
-        <hr style="width:50%;text-align:center;margin-top:50">  
-    </div>
-
-    <div id="experience">
-       <h1 style="padding-top: 5%;">Experience</h1>
-       <hr style="width:50%;text-align:center;margin-bottom:50">
-       <h2>Walmart |   May 2021 - Present</h2>
-       <h2>SS Technologies |   November 2020 - May 2021)</h2>
-       <h2>AINS Inc |  October 2019 - August 2020</h2>
-       <h2>George Mason University |   January 2019 - May 2019</h2>
-       <h2>MuSigma Inc |   October 2015 - July 2017</h2>  
-       <hr style="width:50%;text-align:center;margin-top:50">  
-    </div>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">JP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#connect">Contact</a>
+            </li>    
+          </ul>
+        </div>  
+      </nav>
       
-     <div id="projects">
-       <h1 style="padding-top: 5%;">Projects</h1>
-       <hr style="width:50%;text-align:center;margin-bottom:50">
-       <h2>Artificial Intelligence Algorithms Implementation - A*, Alpha-Beta pruning, Arc Consistency | C++ </h2>
-       <h2>Traffic Sign Detector - Computer Vision | Python</h2>
-       <h2>Network Workbench Protocols | Java</h2>
-       <h2>To-do-List App | Angular 5</h2>
-       <h2>GitHub Finder App | JavaScript, jQuery, AJAX, Github API, Bootstrap</h2>
-       <hr style="width:50%;text-align:center;margin-top:50">  
-     </div>
-
-    <div id="contact" style="height: 100vh; ">
-        <h1 style="padding-top: 10%;">Contact Me</h1>
-        <div style="padding-top: 5%; padding-left: 40%;">
-            <a href="https://www.linkedin.com/in/jananiparg" class="fa fa-linkedin"></a>      
-            <a href="https://github.com/jananiP" class="fa fa-github"></a>
-            <a href="mailto:jananipargunan@gmail.com" class="fa fa-envelope"></a>
+      <div class="container" id="main-content" style="margin-top:30px">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Hi, I'm Janani Pargunan</h1><br/>
+                <p><i>Front-end Developer, MS in Computer Science, George Mason University, USA</i></p><br/>
+                <a target="_blank" href="resume.docx" download="janani-resume">
+                <button type="button" class="btn btn-info">Download Resume</button></a>
+                <a href="#connect">
+                    <button type="button" class="btn btn-dark">Connect</button></a>
+            </div>
+            <div class="col-sm-6">
+                <img src="jan.jpg" width="200px" height="200px" class="rounded-circle" alt="Dharini">
+            </div>
         </div>
-        
+        <div class="row" >
+            <div class="col-sm-4">
+                <h3>Key Skills</h3>
+                <ul class="list-group list-group-flush" style="list-style-type:none;">
+                    <li class="list-group-item"><img src="react.png" width="50px" height="50px" class="rounded float-left" alt="python">
+                    <span>React.js</span></li>
+                    
+                    <li class="list-group-item"><img src="angular.png" width="50px" height="50px" class="rounded float-left" alt="python">
+                      <span>Angular.js</span></li>
+                    
+                      <li class="list-group-item"><img src="next.js" width="50px" height="50px" class="rounded float-left" alt="tableau">
+                        <span> Next.js</span></li>
+
+                    <li class="list-group-item"><img src="html.png" width="50px" height="50px" class="rounded float-left" alt="python">
+                    <span>HTML5</span></li>
+                    
+                    <li class="list-group-item"><img src="js.png" width="50px" height="50px" class="rounded float-left" alt="ml">
+                    <span>JavaScript</span></li>
+
+                    <li class="list-group-item"><img src="css3.png" width="50px" height="50px" class="rounded float-left" alt="aws">
+                    <span>CSS3</span></li>
+                    
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <h3>Other Coding Skills</h3>
+                <ul class="list-group list-group-flush" style="list-style-type:none;">
+                    <li class="list-group-item" style="padding:4%"> <span>C#</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:60%;background-color:green"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" style="padding:4%"> <span>Docker</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:50%;background-color:green"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" style="padding:4%"> <span>.NET</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:20%;background-color:green"></div>
+                        </div>
+                    <li class="list-group-item" style="padding:4%"> <span>SQL Server</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:30%;background-color:green"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
     </div>
-    
-   </div>
+      
+      <div id="connect" class="jumbotron text-center" style="margin-bottom:0;height: 100%; background-color:#212529;">
+        <h3 style="padding-top: 10%; color: white;">Connect with me!</h3><br/>
+        <a class="btn btn-primary" style="background-color: #3b5998;" target="_blank" href="https://www.facebook.com/janani.pargunan/" role="button">
+            <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+        <a class="btn btn-primary" style="background-color: #0082ca;" target="_blank" href="https://www.linkedin.com/in/jananiparg" role="button"
+        ><i class="fab fa-linkedin-in fa-2x"></i
+        ></a>
+        <a class="btn btn-primary" style="background-color: #333333;" target="_blank" href="https://github.com/jananiP" role="button"
+        ><i class="fab fa-github fa-2x"></i
+        ></a>
+        <a class="btn btn-primary" style="background-color: #333333;" target="_blank" href="mailto:jananipargunan@gmail.com" role="button"
+        ><i class="fas fa-envelope fa-2x"></i></a> <br><br>
+        <a href="#main">
+            <button type="button" class="btn btn-info">Back to Home</button></a>
+      </div>
+
 </body>
 
 </html>
