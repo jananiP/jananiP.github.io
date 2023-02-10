@@ -1,125 +1,316 @@
 <html>
 
 <head>
+    <style>
+      .center{
+        margin-top: 10%;
+      }
+      ul.timeline {
+          list-style-type: none;
+          position: relative;
+      }
+      ul.timeline:before {
+          content: ' ';
+          background: #d4d9df;
+          display: inline-block;
+          position: absolute;
+          left: 29px;
+          width: 2px;
+          height: 100%;
+          z-index: 400;
+      }
+      ul.timeline > li {
+          margin: 20px 0;
+          padding-left: 20px;
+      }
+      ul.timeline > li:before {
+          content: ' ';
+          background: white;
+          display: inline-block;
+          position: absolute;
+          border-radius: 50%;
+          border: 3px solid #22c0e8;
+          left: 20px;
+          width: 20px;
+          height: 20px;
+          z-index: 400;
+      }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dharini Pargunan</title>
+    <title>Janani Pargunan</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
 </head>
 
-<body>
-    <div id="main">
-      
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">JP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="#connect">Contact</a>
-            </li>    
-          </ul>
-        </div>  
-      </nav>
-      
-      <div class="container" id="main-content" style="margin-top:30px">
-        <div class="row">
-            <div class="col-sm-6">
-                <h1>Hi, I'm Janani Pargunan</h1><br/>
-                <p><i>Front-end Developer, MS in Computer Science, George Mason University, USA</i></p><br/>
-                <a target="_blank" href="resume.docx" download="janani-resume">
-                <button type="button" class="btn btn-info">Download Resume</button></a>
-                <a href="#connect">
-                    <button type="button" class="btn btn-dark">Connect</button></a>
-            </div>
-            <div class="col-sm-6">
-                <img src="jan.jpg" width="200px" height="200px" class="rounded-circle" alt="Dharini">
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col-sm-4">
-                <h3>Key Skills</h3>
-                <ul class="list-group list-group-flush" style="list-style-type:none;">
-                    <li class="list-group-item"><img src="react.png" width="50px" height="50px" class="rounded float-left" alt="python">
-                    <span>React.js</span></li>
-                    
-                    <li class="list-group-item"><img src="angular.png" width="50px" height="50px" class="rounded float-left" alt="python">
-                      <span>Angular.js</span></li>
-                    
-                      <li class="list-group-item"><img src="next.js" width="50px" height="50px" class="rounded float-left" alt="tableau">
-                        <span> Next.js</span></li>
+<body onload="loadDoc()" style="background-color: #1F2833;color: #C5C6C7;">
+  <nav id="main" class="navbar navbar-expand-lg navbar-light navbar-dark navbar-fixed-top" style="background-color: #182028;">
+    <a class="navbar-brand" href="#">JP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#connect">Contact</a>
+        </li>
 
-                    <li class="list-group-item"><img src="html.png" width="50px" height="50px" class="rounded float-left" alt="python">
-                    <span>HTML5</span></li>
-                    
-                    <li class="list-group-item"><img src="js.png" width="50px" height="50px" class="rounded float-left" alt="ml">
-                    <span>JavaScript</span></li>
-
-                    <li class="list-group-item"><img src="css3.png" width="50px" height="50px" class="rounded float-left" alt="aws">
-                    <span>CSS3</span></li>
-                    
-                </ul>
-            </div>
-            <div class="col-sm-8">
-                <h3>Other Coding Skills</h3>
-                <ul class="list-group list-group-flush" style="list-style-type:none;">
-                    <li class="list-group-item" style="padding:4%"> <span>C#</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:60%;background-color:green"></div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="padding:4%"> <span>Docker</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:50%;background-color:green"></div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="padding:4%"> <span>.NET</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:20%;background-color:green"></div>
-                        </div>
-                    <li class="list-group-item" style="padding:4%"> <span>SQL Server</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:30%;background-color:green"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </div>
-
+       
+      </ul>
     </div>
-      
-      <div id="connect" class="jumbotron text-center" style="margin-bottom:0;height: 100%; background-color:#212529;">
-        <h3 style="padding-top: 10%; color: white;">Connect with me!</h3><br/>
-        <a class="btn btn-primary" style="background-color: #3b5998;" target="_blank" href="https://www.facebook.com/janani.pargunan/" role="button">
-            <i class="fab fa-facebook-f fa-2x"></i>
-        </a>
-        <a class="btn btn-primary" style="background-color: #0082ca;" target="_blank" href="https://www.linkedin.com/in/jananiparg" role="button"
-        ><i class="fab fa-linkedin-in fa-2x"></i
-        ></a>
-        <a class="btn btn-primary" style="background-color: #333333;" target="_blank" href="https://github.com/jananiP" role="button"
-        ><i class="fab fa-github fa-2x"></i
-        ></a>
-        <a class="btn btn-primary" style="background-color: #333333;" target="_blank" href="mailto:jananipargunan@gmail.com" role="button"
-        ><i class="fas fa-envelope fa-2x"></i></a> <br><br>
-        <a href="#main">
-            <button type="button" class="btn btn-info">Back to Home</button></a>
-      </div>
+  </nav>
+  
+  <div id="home" class="container center" style="min-height: 100%;">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="./jan.jpg" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col-sm-4">
+          <p class="lead" style="color: #66FCF1;">Hello, world!</p>
+          <h1 class="display-4" >I'm Janani Pargunan</h1>
+          <hr class="my-4">
+          <p>I am a Front-end Developer. I enjoy building high-quality applications on web and mobile platforms.
+          </p>
+          <p class="lead">
+            <a class="btn btn-lg" style="background-color: #45A29E;" href="#work" role="button">Learn more</a>
+          </p>
+        </div>
+        </div>
+  </div>
 
+  <div id="skills" class="container" style="min-height: 100%;">
+    <div class="row my-3">
+        <div class="col">
+            <h2>Technical Expertise</h2>
+        </div>
+    </div>
+    <div class="row py-2">
+      <div class="col-md-4 py-1" style="background-color: #1F2833;">
+        <canvas id="chDonut1"></canvas>
+      </div>
+      <div class="col-md-4 py-1">
+        <canvas id="chBar" height="100"></canvas>
+      </div>
+    </div>
+</div>
+
+  <div id="work" class="container center" style="min-height: 100%;">
+    <div class="row">
+      <h2>Work Experience</h2>
+      <div class="col-md-10 offset-md-1">
+        <ul class="timeline">
+          <li>
+            <a target="_blank" style="color: #66fcf1" href="#">Front-end Developer, Walmart</a>
+            <a href="#" style="color: #66fcf1" class="float-right">May 2021 - Jan 2023</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+          </li>
+          <li>
+            <a href="#" style="color: #66fcf1">UI Developer, SS Technologies</a>
+            <a href="#" style="color: #66fcf1" class="float-right">November 2020 - May 2021</a>
+            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+          </li>
+          <li>
+            <a href="#" style="color: #66fcf1">Software Developer, AINS Inc</a>
+            <a href="#" style="color: #66fcf1" class="float-right">October 2019 - August 2020</a>
+            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+          </li>
+          <li>
+            <a href="#" style="color: #66fcf1">Graduate Research Assistant, George Mason University</a>
+            <a href="#" style="color: #66fcf1" class="float-right">January 2019 - May 2019</a>
+            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+          </li>
+          <li>
+            <a href="#" style="color: #66fcf1">Full Stack Web Developer, MuSigma</a>
+            <a href="#" style="color: #66fcf1" class="float-right">October 2015 - July 2017</a>
+            <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects" class="container" style="min-height: 100%;">
+    <div class="row">
+      <h2>Projects</h2>
+      <div id="repos" class="container"></div>
+    </div>
+    
+  </div>
+
+  <div id="connect" class="jumbotron text-center" style="margin-bottom:0; min-height: 100%;background-color:#212529;">
+     <h3 style="padding-top: 10%; color: white;">Connect with me!</h3><br/>
+      <a class="btn btn-primary" style="background-color: #3b5998;" target="_blank" href="https://www.facebook.com/janani.pargunan/" role="button">
+          <i class="fab fa-facebook-f fa-2x"></i></a>
+      <a class="btn btn-primary" style="background-color: #0082ca;" target="_blank" href="https://www.linkedin.com/in/jananiparg" role="button">
+          <i class="fab fa-linkedin-in fa-2x"></i></a>
+      <a class="btn btn-primary" style="background-color: #333333;" target="_blank" href="https://github.com/jananiP" role="button">
+          <i class="fab fa-github fa-2x"></i></a>
+      <a class="btn btn-primary" style="background-color: #333333;" target="_blank" href="mailto:jananipargunan@gmail.com" role="button">
+          <i class="fas fa-envelope fa-2x"></i></a> <br><br>
+      <a href="#main"><button type="button" class="btn btn-info">Back to Home</button></a>
+  
+  </div>
+
+  <script>
+    /* chart.js chart examples */
+
+// chart colors
+var colors = ['#28a745','#007bff','#333333','#c3e6cb','#dc3545','#6c757d'];
+
+/* 3 donut charts */
+var donutOptions = {
+  cutoutPercentage: 85, 
+  legend: {position:'bottom', padding:5, labels: {pointStyle:'circle', usePointStyle:true}}
+};
+
+// donut 1
+var chDonutData1 = {
+    labels: ['Front-end', 'APIs', 'Databases', 'Cloud', 'CI/CD'],
+    datasets: [
+      {
+        backgroundColor: colors.slice(0,5),
+        borderWidth: 0,
+        data: [60, 30, 5, 3, 2]
+      }
+    ]
+};
+
+var chDonut1 = document.getElementById("chDonut1");
+if (chDonut1) {
+  new Chart(chDonut1, {
+      type: 'pie',
+      data: chDonutData1,
+      options: donutOptions
+  });
+}
+
+/* chart.js chart examples */
+
+// chart colors
+var colors = ['#007bff','#28a745','#444444','#c3e6cb','#dc3545','#6c757d'];
+
+var chBar = document.getElementById("chBar");
+var chartData = {
+  labels: ["JavaScript", "HTML", "CSS", "React.js", "Node.js", "Next.js", "Nest.js", "Angular", "C#", ".NET", "SQL", "Docker", "AWS"],
+  datasets: [{
+    data: [9, 9, 9, 8, 8, 8, 8, 7, 3, 3, 6, 2, 2],
+    backgroundColor: colors[1]
+  }]
+};
+
+if (chBar) {
+  new Chart(chBar, {
+  type: 'bar',
+  data: chartData,
+  options: {
+    scales: {
+      xAxes: [{
+        barPercentage: 0.4,
+        categoryPercentage: 0.5
+      }],
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+    legend: {
+      display: false
+    }
+  }
+  });
+}
+
+  function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        //document.getElementById("demo").innerHTML = this.responseText;
+        console.log("Loaded function");
+        const obj = JSON.parse(this.responseText);
+        let div = document.getElementById("repos");
+            // div.style.display="grid";
+            // div.style.gridTemplateColumns="repeat(3,1fr)";
+            // div.style.gap="10px";
+        let divRow; 
+        console.log("obj length ", obj.length);
+        obj.map((repo, index) => {
+          if(index%4 === 0){
+            if(divRow){
+              div.append(divRow);
+            }
+            
+            divRow = document.createElement("div");
+            divRow.classList.add("row");
+          }
+            console.log(`repo: ${repo.name} ${repo.html_url} ${repo.description} ${repo.forks}`);
+            let divCol = document.createElement("div");
+            divCol.classList.add("col-md-3");
+            divCol.classList.add("card");
+            divCol.style.backgroundColor="#1F2833";
+            divCol.style.padding="10 10 10 10";
+
+            let divBody = document.createElement("div");
+            divBody.classList.add("card-body");
+            divBody.style.backgroundColor="#182028";
+
+            // Project title
+            let h4 = document.createElement("h4");
+            h4.textContent = repo.name;
+            h4.classList.add("card-title");
+
+            // Project description
+            let p = document.createElement("p");
+            const ptext = document.createTextNode(repo.description);
+            p.appendChild(ptext);
+            p.classList.add("card-text");
+
+            // Git link
+            let a = document.createElement('a'); 
+            let link = document.createTextNode("Git Link");
+            a.appendChild(link); 
+            a.title = "Go to Git repo"; 
+            a.href = repo.html_url; 
+            a.classList.add("btn");
+            a.classList.add("btn-info");
+            
+            divBody.append(h4);
+            divBody.append(p)
+            divBody.append(a);
+            divCol.append(divBody);
+            divRow.append(divCol);
+
+            if(index === obj.length-1){
+              div.append(divRow);
+              console.log('divrow',divRow);
+            }
+          }
+        );
+        }
+
+      xhttp.open("GET", "https://api.github.com/users/jananiP/repos");
+      xhttp.send();
+      
+    }
+  </script>
 </body>
 
 </html>
